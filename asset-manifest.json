@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/p5manager/static/css/main.e04aa5f6.chunk.css",
+    "main.js": "/p5manager/static/js/main.7548fc22.chunk.js",
+    "main.js.map": "/p5manager/static/js/main.7548fc22.chunk.js.map",
+    "runtime-main.js": "/p5manager/static/js/runtime-main.d297b37c.js",
+    "runtime-main.js.map": "/p5manager/static/js/runtime-main.d297b37c.js.map",
+    "static/js/2.cf4af3de.chunk.js": "/p5manager/static/js/2.cf4af3de.chunk.js",
+    "static/js/2.cf4af3de.chunk.js.map": "/p5manager/static/js/2.cf4af3de.chunk.js.map",
+    "index.html": "/p5manager/index.html",
+    "precache-manifest.5e1b0417df241f24d73a9da62b283c71.js": "/p5manager/precache-manifest.5e1b0417df241f24d73a9da62b283c71.js",
+    "service-worker.js": "/p5manager/service-worker.js",
+    "static/css/main.e04aa5f6.chunk.css.map": "/p5manager/static/css/main.e04aa5f6.chunk.css.map",
+    "static/js/2.cf4af3de.chunk.js.LICENSE.txt": "/p5manager/static/js/2.cf4af3de.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d297b37c.js",
+    "static/js/2.cf4af3de.chunk.js",
+    "static/css/main.e04aa5f6.chunk.css",
+    "static/js/main.7548fc22.chunk.js"
+  ]
+}
