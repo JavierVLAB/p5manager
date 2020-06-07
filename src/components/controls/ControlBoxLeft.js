@@ -1,53 +1,38 @@
 import React, { Component } from "react";
-//import UiBoxData from "./UiBoxData";
-//import UiBoxGraphic from "./UiBoxGraphic";
+import UiBoxImport from "./UiBoxImport";
+
 
 class ControlBoxLeft extends Component {
-    test() {
-        alert("a");
-    }
-    render() {
-        return (
-            <main id="main">
-                <section id="controlsLeft">
-                    {/*
-                    <UiBoxData
-                        name="Data"
-                        collapsed={true}
-                        artist={this.props.name}
-                        onChangeArtist={this.props.changeName}
-                        title={this.props.title}
-                        onChangeTitle={this.props.changeTitle}
-                        subline={this.props.subline}
-                        onChangeSubline={this.props.changeSubline}
-                    />
+	test() {
+		alert("a");
+	}
+	render() {
+		return (
+			<main id="main">
+				<section id="controlsLeft">
+					
+					<UiBoxImport
+						name="Import Sketch"
+						collapsed={true}
 
-                    <UiBoxGraphic
-                        name="Graphic"
-                        collapsed={true}
-                        arr={this.props.arr}
-                        svg={this.props.svg}
-                        scale={this.props.scale}
-                        changeScale={this.props.changeScale}
-                        changeSvg={this.props.changeSvg}
-                        svgRotation={this.props.svgRotation}
-                        changeSvgRotation={this.props.changeSvgRotation}
-                        translateX={this.props.translateX}
-                        changeTranslateX={this.props.changeTranslateX}
-                        translateY={this.props.translateY}
-                        changeTranslateY={this.props.changeTranslateY}
-                        nextGraphic={this.props.nextGraphic}
-                        prevGraphic={this.props.prevGraphic}
-                        graphics={this.props.graphics}
-                        toggleSvgModal={this.props.toggleSvgModal}
-                    />
-                    */}
-                    
-                </section>
+						sketchName = {this.props.sketchName}
+						sketches = {this.props.sketches}
+						changeSketch = {this.props.changeSketch} 
+						width = {this.props.width}
+						changeWidth = {this.props.changeWidth}
+						height = {this.props.height}
+						changeHeight = {this.props.changeHeight}
+						
+					/>  
 
-            </main>
-        );
-    }
+					        
+
+					
+				</section>
+
+			</main>
+		);
+	}
 }
 
 export default ControlBoxLeft;

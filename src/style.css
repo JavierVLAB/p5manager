@@ -1,0 +1,841 @@
+/* FontLoading */
+
+.fw300 {
+  font-weight: 100;
+}
+
+.fw300 {
+  font-weight: 300;
+}
+
+.fw400 {
+  font-weight: 400;
+}
+
+.fw500 {
+  font-weight: 500;
+}
+
+.fw600 {
+  font-weight: 600;
+}
+
+.fw700 {
+  font-weight: 700;
+}
+
+.fw800 {
+  font-weight: 800;
+}
+
+.fw900 {
+  font-weight: 900;
+}
+
+#fontloader {
+  display: flex;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+html,
+body,
+*, input {
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", sans-serif;
+
+}
+
+body {
+}
+
+.App {
+  
+  
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 300;
+  /*text-transform: uppercase;*/
+}
+
+.cover {
+  
+}
+
+#controlsLeft {
+  width: 25%;
+
+  padding: 0 15px 15px 15px;
+  z-index: 100; 
+  
+}
+
+#controlsLeft::-webkit-scrollbar {
+    width: 6px;
+    background-color: #ffffff;
+} 
+
+#constrolLeft::-webkit-scrollbar-thumb {
+    width: 6px;
+    background-color: red;
+}
+
+#controlsRight {
+  width: 17.5%;
+  z-index: 100;
+  height: 100vh;
+
+  padding: 15px;
+}
+
+#artboard {
+  position: fixed;
+  top:0;
+  right: 0;
+  
+  width: 75%;
+  height: 100vh;
+  display: flex;
+
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: all 500ms ease; /* Firefox */
+  -moz-transition: all 500ms ease; /* WebKit */
+  -o-transition: all 500ms ease; /* Opera */
+  transition: all 500ms ease; /* Standard */
+  perspective: 100vw;
+}
+
+.cover {
+  width: 550px;
+  height: 550px;
+  overflow: hidden;
+  -webkit-transition: all 200ms ease; /* Firefox */
+  -moz-transition: all 200ms ease; /* WebKit */
+  -o-transition: all 200ms ease; /* Opera */
+  transition: all 200ms ease; /* Standard */
+}
+
+h1 {
+  margin: 0;
+  line-height: 100%;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 14px;
+
+  font-weight: 400;
+  margin: 0 0 5px 0;
+  color: black;
+}
+
+input {
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; /* remove default arrow */
+}
+
+input,
+select,
+textarea {
+  position: relative;
+  font-size: 14px;
+  width: 100%;
+  background: transparent;
+  font-weight: 400;
+  border-radius: 0px;
+}
+
+input,
+select {
+  height: 25px;
+}
+
+input {
+  top:-2px;
+  border-bottom: 1px solid black;
+}
+
+button {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+input,
+select,
+textarea {
+  background: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  height: 30px;
+}
+
+.field h4 {
+  margin: 0;
+  width: 30%;
+}
+
+.field input.textInput {
+  width: 70%;
+}
+
+.field select {
+  width: 50%;
+}
+
+.field textarea {
+  width: 60%;
+  height: 60px;
+}
+
+.parent {
+  position: relative;
+}
+
+.child {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.coverImage {
+  width: 550px;
+  height: 550px;
+}
+
+.cover img {
+  width: 100%;
+}
+
+.group {
+  padding: 15px 0 15px 0;
+  /*border: 1px solid black;*/
+  /*height: 60px;
+  overflow: hidden;*/
+  border-bottom: 1px solid black;
+}
+
+.group:last-of-type {
+  border: 0;
+
+}
+
+.group h3 {
+  margin: 0;
+  font-size: 14px;
+  display: inline-block;
+  text-transform: uppercase;
+
+  font-weight: 400;
+}
+
+#save {
+  
+  padding: 15px;
+  width: 100%;
+}
+
+#save button {
+  width: 100%;
+  height: 30px;
+}
+
+#save button:active {
+  background: black;
+  color: white;
+}
+
+.coverImage {
+  background-position: center center;
+}
+
+h3 {
+  margin: 0;
+}
+
+#textContainer {
+  display: flex;
+  width: 550px;
+  height: 550px;
+  padding: 15px;
+}
+
+#textContainer div {
+  width: 100%;
+}
+
+#imageBrowser {
+  width: 100%;
+  height: 100vh;
+  background: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  display: none;
+}
+
+#imageBrowser.active {
+  display: block;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+}
+
+.svgWrapper {
+  width: 550px;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.example path {
+}
+
+.boxHead {
+}
+
+.boxBody.collapsed {
+  height: 0;
+  overflow:hidden;  
+}
+
+
+
+.boxBodyInner {
+  padding-top: 15px;
+
+}
+
+svg {
+}
+
+.subline {
+  padding: 15px;
+  font-size: 12px;
+}
+
+.sublineContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+
+.colorField {
+  width: 30px;
+  height: 30px;
+}
+
+.colorName {
+  text-align: center;
+
+  font-weight: 600;
+  padding: 10px;
+}
+
+
+option {
+}
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: rgba(240, 240, 240, 0.8);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ModalBtnClose {
+  position: absolute;
+  padding: 15px;
+  font-size: calc(14px + 3vw);
+  top: 0;
+  right: 0;
+}
+
+.ModalBtnClose button {
+  color: #111111;
+}
+
+.ModalBtnTheme {
+  position: absolute;
+  padding: 15px;
+  font-size: calc(14px + 3vw);
+  top: 0;
+  left: 0;
+}
+
+.ModalBtnTheme button {
+  color: #111111;
+}
+
+/* The slider itself */
+.inputRangeSlider {
+  position: relative;
+  top: -6px;
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 5px; /* Specified height */
+  background: #eeeeee; /* Grey background */
+  outline: none; /* Remove outline */
+  cursor: pointer;
+}
+
+/* The slider handle (use webkit (Chrome, Opera, Safari, Edge) and moz (Firefox) to override default look) */
+.inputRangeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 12px; /* Set a specific slider handle width */
+  height: 12px; /* Slider handle height */
+  background: #111111; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 100%;
+  -webkit-transition: all 500ms ease;
+-moz-transition: all 500ms ease;
+-ms-transition: all 500ms ease;
+-o-transition: all 500ms ease;
+transition: all 500ms ease;
+}
+
+.inputRangeSlider::-webkit-slider-thumb:hover {
+  -moz-transform: scale(1.9);
+-webkit-transform: scale(1.9);
+-o-transform: scale(1.9);
+-ms-transform: scale(1.9);
+transform: scale(1.9);
+}
+
+
+.inputRangeSlider::-moz-range-thumb {
+
+  appearance: none;
+  width: 12px; /* Set a specific slider handle width */
+  height: 12px; /* Slider handle height */
+  background: #111111; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 100%;
+}
+
+.sliderContainer {
+  width: 60%;
+}
+
+textarea {
+  resize: none;
+}
+
+.colorField {
+}
+
+.color {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
+.boxBodyColors {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.boxBodyColors div {
+  cursor: pointer;
+}
+
+.artist {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px;
+}
+
+.title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+}
+
+.boxHead h3 {
+  cursor: pointer;
+}
+
+input::-moz-selection {
+  color: black;
+  background: yellow;
+}
+
+input::selection {
+  color: black;
+  background: yellow;
+}
+
+::-moz-selection {
+
+  background: transparent;
+}
+
+::selection {
+
+  background: transparent;
+}
+
+.lighten {
+
+}
+
+.lighten:hover {
+
+}
+
+.record {
+  top: 0;
+  left: 0;
+  position: relative;
+  width: 600px;
+  height: 600px;
+}
+
+.cover {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  -webkit-transition: all 500ms ease; /* Firefox */
+  -moz-transition: all 500ms ease; /* WebKit */
+  -o-transition: all 500ms ease; /* Opera */
+  transition: all 500ms ease; /* Standard */
+}
+
+.vinyl {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: #111111;
+  border-radius: 100%;
+  -webkit-transition: all 500ms ease; /* Firefox */
+  -moz-transition: all 500ms ease; /* WebKit */
+  -o-transition: all 500ms ease; /* Opera */
+  transition: all 500ms ease; /* Standard */
+}
+
+.recordWrapper {
+  -webkit-transition: all 500ms ease; /* Firefox */
+  -moz-transition: all 500ms ease; /* WebKit */
+  -o-transition: all 500ms ease; /* Opera */
+  transition: all 500ms ease; /* Standard */
+}
+
+.view1 {
+  background: #bbbbbb !important;
+}
+
+.view1 .cover {
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.view2 {
+
+  background: #bbbbbb !important;
+}
+
+.view2 .cover {
+
+box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);  
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);  
+}
+
+
+
+.view2 .recordWrapper {
+
+  transform: rotateY(-15deg);
+  -webkit-transform: rotateY(-15deg);
+  -moz-transform: rotateY(-15deg);
+
+
+}
+
+.view2 .record .vinyl {
+  left: 50px;
+}
+
+.view2 .record .cover {
+  left: -50px;
+}
+
+
+.view3 {
+  background: #eeeeee;
+}
+
+.view3 .recordWrapper {
+  
+}
+
+/*
+  Schatten
+
+.recordWrapper .record::after {
+    background: linear-gradient(to right,rgba(0,0,0,.1) 0%,rgba(211,211,211,.1) 5%,rgba(255,255,255,.15) 5%,rgba(255,255,255,.1) 9%,rgba(0,0,0,.01) 100%);
+    background: -webkit-linear-gradient(left,rgba(0,0,0,.1) 0%,rgba(211,211,211,.1) 5%,rgba(255,255,255,.15) 5%,rgba(255,255,255,.1) 9%,rgba(0,0,0,.01) 100%);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;  
+}*/
+
+.view4 {
+  
+ background: #cccccc;  
+}
+
+.btn {
+  margin-top: 15px;
+  padding: 15px;
+  background: #eeeeee;
+  color: black;
+  -webkit-transition: all 500ms ease; /* Firefox */
+  -moz-transition: all 500ms ease; /* WebKit */
+  -o-transition: all 500ms ease; /* Opera */
+  transition: all 500ms ease; /* Standard */
+  /*border: 2px solid black;*/
+
+}
+
+.btn:hover {
+  background: black;
+  color: white;
+  /*border: 2px solid black;*/
+}
+
+.stepper {
+  display: flex;
+}
+
+.stepperBox {
+  
+  height: 20px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 10px;
+    display: flex;
+justify-content: center;
+align-items: center;
+background: #eeeeee;
+}
+
+.stepperBox.left:active {
+  background: black;
+  color: white;
+}
+
+.stepperBox.center {
+  width: 30px;
+}
+
+.stepperBox.right,
+.stepperBox.left {
+  width: 20px;
+  -webkit-transition: all 500ms ease; /* Firefox */
+  -moz-transition: all 500ms ease; /* WebKit */
+  -o-transition: all 500ms ease; /* Opera */
+  transition: all 500ms ease; /* Standard */
+}
+
+.stepperBox.right:hover,
+.stepperBox.left:hover {
+  background: #aaaaaa;
+}
+
+.stepperBox.right:active {
+  background: black;
+  color: white;  
+}
+
+#main {
+  width: 100%;
+}
+
+.modalWrapper {
+  width: 75%;
+
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  
+}
+
+.modal {
+  position: relative;
+
+  
+  width: 100%;
+
+  background: white;
+  overflow-y: scroll;
+
+}
+
+.thumbnail {
+  padding: 15px;
+  width: 20%;
+  cursor: pointer;
+  display: inline-block;
+  border: 2px solid white;
+}
+
+.thumbnail:hover {
+  border: 2px solid black;
+}
+
+.thumbnail img{
+  
+
+}
+
+.modalTrigger {
+  -webkit-transition: all 500ms ease; /* Firefox */
+  -moz-transition: all 500ms ease; /* WebKit */
+  -o-transition: all 500ms ease; /* Opera */
+  transition: all 500ms ease; /* Standard */
+  height: 20px;
+  font-size: 12px;
+  font-weight: 400; 
+  /*border: 2px solid black;*/
+  background:#eeeeee;
+  color: black;
+}
+
+.modalTrigger:hover {
+  background: black;
+  color: white;
+}
+
+
+
+.component {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;   
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.boxBody {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+
+@-webkit-keyframes boxBody {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes boxBody {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.boxBody {
+  -webkit-animation-name: boxBody;
+  animation-name: boxBody;
+}
+
+
+.chevron {
+  width: 7px;
+}
+
+p {
+  line-height: 130%;
+  margin: 0;
+}
+
+#credit {
+  position: fixed;
+  bottom: 0;
+  padding: 15px;
+}
+
+#main {
+  min-height: 100vh;
+}

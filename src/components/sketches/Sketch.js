@@ -18,6 +18,7 @@ class Sketch extends Component {
       let N = 10;
       let pause = false;
       let force = true;
+      //let looping = true;
 
       //  class
       class Particle {
@@ -73,17 +74,13 @@ class Sketch extends Component {
         updatePosition();
       }
 
-      
-
-      
-
       p.setup = () => {
-        p.createCanvas(p.windowWidth-400, p.windowHeight-80);
+        p.createCanvas(this.props.width, this.props.height);
+        //p.createCanvas(p.windowWidth-400, p.windowHeight-80);
         for (let i = 0; i < N; i++){
           balls.push(new Particle());
         }
-        initialDraw();
-        
+        initialDraw();    
       }
 
       p.draw = () => {
@@ -93,8 +90,7 @@ class Sketch extends Component {
           balls[i].update();
           //balls[i].display();
         }
-        show3(this.props);
-        
+        show3(this.props);    
       }
 
       function show3(props){
@@ -108,14 +104,12 @@ class Sketch extends Component {
         
         //p.translate(p.width/2,p.height/2);
         p.rotate(p.frameCount*0.001);
-        
-
+  
         for (let i = balls.length - 1; i > 0; i--){
           for (let j = 0; j < i; j++){
             let d = p5.Vector.dist(balls[i].pos, balls[j].pos);                       
             if(d < 80 && d > 20){
-              //random(1) < 0.2 ? stroke(0,100) : stroke(255, 10);
-                 
+              //random(1) < 0.2 ? stroke(0,100) : stroke(255, 10);    
               p.line(balls[i].pos.x,balls[i].pos.y,
                    balls[j].pos.x,balls[j].pos.y);
             }
@@ -135,16 +129,26 @@ class Sketch extends Component {
       p.keyTyped = () => {
 
         if(p.key === 'r') initialDraw();
+        if(p.key === 'R') p.setup();
         if(p.key === 'p'){
           pause = !pause;
           pause ? p.noLoop() : p.loop();
         }
         if(p.key === 'u') updatePosition();
         if(p.key === 'f') force = !force;
+        if(p.key === 's') p.save();
       
       }
 
-
+/*      p.keyPressed  = () => {
+        if(looping) {
+          p.noLoop();
+          looping = false;
+        } else {
+          p.loop(); 
+          looping = true;
+        }
+      }*/
     }
   
     componentDidMount() {
